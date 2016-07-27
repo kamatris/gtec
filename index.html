@@ -14,9 +14,9 @@
     <input type="text" ng-model="age"/>
     <span ng-bind="vm1.name" ></span>
     <h3>{{vm1.name}}</h3>
-    <!--<pre>{{vm1.list}}</pre>-->
+    <pre>{{vm1.list}}</pre>
     <ul>
-        <li ng-repeat="l in vm1.list | filter:'age'">{{l.Name}} {{l.Age}} {{l.Adresse}}</li>
+        <li ng-repeat="l in vm1.list | orderBy:'Age'">{{l.Name}} {{l.Age}} {{l.Adresse}}</li>
     </ul>
 </div>       
 
