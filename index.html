@@ -18,7 +18,11 @@
     <ul>
         <li ng-repeat="l in vm1.list | orderBy:'Age'">{{l.Name}} {{l.Age}} {{l.Adresse}}</li>
     </ul>
-</div>       
+</div> 
+<!-- ng-if vs ng-show //ngIf not loat this bloc || ngShow load this bloc but hide -->
+<div ng-show="false">
+    <h1>App</h1>
+</div>    
 
 <script src="angular.js"></script>
 <script src="app/app.js"></script>
