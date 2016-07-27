@@ -1,9 +1,26 @@
-<html>
+<html ng-app='gtec'>
     <head>
         <meta charset="utf-8">
         <title>First Page Angular JS</title>
+        <style>        
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+            }
+        </style>
     </head>
-    <body>
-        <h1>My First Page</h1>
-    </body>
+<body ng-cloak>
+<div ng-controller="gCtrl as vm1">            
+    <h2>Since : {{depuis}}</h2>
+    <input type="text" ng-model="age"/>
+    <span ng-bind="vm1.name" ></span>
+    <h3>{{vm1.name}}</h3>
+    <!--<pre>{{vm1.list}}</pre>-->
+    <ul>
+        <li ng-repeat="l in vm1.list | filter:'age'">{{l.Name}} {{l.Age}} {{l.Adresse}}</li>
+    </ul>
+</div>       
+
+<script src="angular.js"></script>
+<script src="app/app.js"></script>
+</body>
 </html>
