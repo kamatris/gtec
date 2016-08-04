@@ -2,4 +2,16 @@
 
 <div>
    <h1>{{vm.name}}</h1>
+   <h3>
+       <table class="table">
+           <tr class="bg-primary">
+               <td>Name</td>
+               <td>Country</td>
+           </tr>
+           <tr ng-repeat="tab in vm.list">
+                <td>{{tab.Name}}</td>
+                <td>{{tab.Country}}</td> 
+           </tr>
+       </table>
+   </h3>
 </div>

@@ -2,7 +2,11 @@
 
     function navCtrl(){
        return {
-
+            restrict : 'EA',
+            templateUrl : 'app/nav/nav.html',
+            scope:{
+                projectName: '@'
+            }
        };
 
     }
